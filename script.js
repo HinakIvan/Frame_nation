@@ -1574,7 +1574,12 @@ return html;
 
 }
 
-const isIndex = window.location.pathname.includes("index");
+const path = window.location.pathname;
+const isIndex =
+  path === "/" ||
+  path.endsWith("/index.html") ||
+  path === "/Frame_nation/" ||
+  path.endsWith("/Frame_nation/index.html");
 
 const eventHTML = (isPast)=>`
 <div class="карточка-события">
