@@ -1,0 +1,429 @@
+/* =========================================================
+BASE
+========================================================= */
+
+*{ box-sizing:border-box; }
+
+html,body{ height:100%; }
+
+body{
+margin:0;
+padding-top:var(--высота-шапки);
+
+font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+color:var(--текст-светлый1);
+
+background-color: var(--фон-темный3) !important;
+overflow-x:hidden;
+}
+
+.секция-присоединяйся {
+  background: var(--фон-темный3) !important;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.название-секции {
+  color: var(--текст-светлый2); /* твой цвет */
+
+}
+
+.подзаголовок-секции{
+  text-align: center;
+  font-size: 15px;
+  max-width: 900px;
+  margin: 16px auto 16px auto;
+}
+
+button{
+font-family:inherit;
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.контейнер{
+width:min(var(--контейнер),calc(100% - var(--паддинг-гор)));
+margin-inline:auto;
+
+}
+
+
+/* =========================================================
+EVENT SECTIONS
+========================================================= */
+
+.секция-события-страница{
+background:var(--фон-темный1);
+padding:80px 0;
+}
+
+body .секция-прошедшие-события{
+background:var(--фон-темный3);
+padding:80px 0;
+}
+
+/* =========================================================
+EVENT LIST
+========================================================= */
+
+.events-list{
+display:flex;
+flex-direction:column;
+gap:40px;
+
+margin-top:40px;
+}
+
+
+/* =========================================================
+EVENT CARD
+========================================================= */
+
+.events-list .карточка-события{
+
+width:100%;
+max-width:1100px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 1.3fr;
+
+align-items:stretch;
+
+border-radius:22px;
+overflow:hidden;
+
+background:var(--фон-светлый3);
+
+border:2px solid var(--фон-светлый2);
+
+min-height:320px;
+max-height:520px;
+
+transition:transform .25s ease, box-shadow .25s ease;
+
+}
+
+.events-list .карточка-события:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 40px rgba(0,0,0,0.08);
+}
+
+.кнопка-сертификат{
+margin-top:0px;
+color:var(--фон-светлый0) ;
+}
+/* =========================================================
+EVENT TEXT
+========================================================= */
+
+.карточка-события .инфо-события{
+
+display:flex;
+flex-direction:column;
+
+justify-content:flex-start;
+
+gap:16px;
+
+padding:50px 50px;
+
+height:100%;
+
+/* поднимаем текст немного выше */
+/* transform:translateY(-110px); */
+
+}
+
+.дата-события{
+font-size:13px;
+font-weight:700;
+/* opacity:.7; */
+color:var(--фон-темный0) !important;
+}
+
+.заголовок-события{
+font-size:27px !important;
+font-weight:800;
+line-height:1.2;
+color: var(--фон-светлый0) !important;
+}
+
+.описание-события{
+font-size:16px !important;
+line-height:1.4;
+color:var(--фон-светлый1) !important;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+
+overflow:hidden;
+}
+
+/* ========================================
+EVENT PRICES
+======================================== */
+
+.event-prices{
+
+display:flex;
+gap:10px;
+
+margin:95px 0 -20px;
+
+flex-wrap:nowrap;   /* запрещаем перенос */
+
+}
+
+.price-card{
+
+background:var(--фон-темный3);
+color: var(--текст-светлый0);
+
+padding:14px 18px;
+
+border-radius:14px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+min-width:120px;
+
+}
+
+.price-title{
+
+font-size:11px;
+opacity:.9;
+margin-bottom:4px;
+
+}
+
+.price-value{
+
+font-size:18px;
+font-weight:700;
+
+}
+.past-events .инфо-события{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.past-events .event-prices{
+margin-top:auto;
+}
+
+
+.price-czk{
+
+font-size:13px;
+font-weight:600;
+
+opacity:.95;
+
+margin-top:5px;
+
+}
+
+/* =========================================================
+EVENT IMAGE
+========================================================= */
+
+.карточка-события .изображение-события{
+height:100%;
+display:flex;
+}
+
+.карточка-события .изображение-события img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position: center 50%;
+}
+
+
+/* =========================================================
+PLACEHOLDER
+========================================================= */
+
+.upcoming-placeholder .placeholder-image{
+width:100%;
+height:100%;
+
+background: var(--фон-светлый);
+}
+
+
+/* =========================================================
+PAST EVENTS 
+========================================================= */
+
+.past-events .карточка-события{
+  background: var(--фон-темный0);
+}
+
+.past-events .карточка-события .дата-события{
+  color: var(--текст-светлый3) !important;
+}
+
+.past-events .карточка-события .заголовок-события{
+  color: var(--фон-светлый0) !important;
+}
+
+.past-events .карточка-события .описание-события{
+  color: var(--текст-светлый3) !important;
+}
+
+.past-events .карточка-события .кнопка{
+  background: var(--фон-темный4) !important;
+  color: var(--фон-светлый0) !important;
+  border: 2px solid var(--фон-темный4) !important;
+}
+
+.past-events .карточка-события .кнопка:hover{
+  background: var(--текст-темный4) !important;
+  color: #2c1b16 !important;
+  border-color: #b88a67 !important;
+}
+
+
+
+.past-events .карточка-события:nth-child(even){
+grid-template-columns:1.3fr 1fr;
+}
+
+.past-events .карточка-события:nth-child(even) .инфо-события{
+order:2;
+}
+
+.past-events .карточка-события:nth-child(even) .изображение-события{
+order:1;
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+.events-list .карточка-события{
+grid-template-columns:1fr;
+}
+.past-events .карточка-события{
+  width: 100%;
+  max-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .past-events .карточка-события {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .past-events .карточка-события .изображение-события {
+    width: 100% !important;
+    height: 260px !important;
+  }
+
+  .past-events .карточка-события .инфо-события {
+    width: 100% !important;
+    padding: 12px 14px !important;
+  }
+}
+
+.карточка-события .изображение-события{
+height:260px;
+}
+
+.карточка-события .инфо-события{
+padding:12px 14px;
+transform:none;
+}
+
+.дата-события{
+font-size:10px;
+margin-bottom:-10px;
+}
+
+.past-events .дата-события{
+font-size:10px;
+margin-top:10px !important;
+}
+
+
+.заголовок-события{
+font-size:25px !important;
+}
+
+.описание-события{
+font-size:13px !important;
+}
+
+
+.price-card{
+flex:1;
+min-width:0;
+
+}
+
+.event-prices{
+display:flex;
+gap:10px;
+margin-top:6px;
+flex-wrap:nowrap;
+
+width:100%;
+
+}
+
+.price-title{
+font-size:10px;
+}
+
+.price-czk{
+font-size:11px;
+}
+
+.price-value{
+font-size:14px;
+}
+
+.upcoming-placeholder{
+min-height:100px !important;
+max-height:140px !important;
+}
+
+}
+
+@media (max-width:768px){
+
+.past-events .карточка-события:nth-child(even){
+grid-template-columns:1fr;
+}
+
+.past-events .карточка-события:nth-child(even) .инфо-события{
+order:0;
+}
+
+.past-events .карточка-события:nth-child(even) .изображение-события{
+order:0;
+}
+
+}

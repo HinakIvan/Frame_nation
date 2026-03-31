@@ -1,0 +1,210 @@
+/* =========================================================
+MERCH PAGE — ISOLATED (SAFE, NO HEADER/FOOTER CONFLICTS)
+========================================================= */
+body {
+  background: var(--фон-темный1);
+}
+
+/* =========================
+SECTION
+========================= */
+
+.секция-мерча{
+  background: var(--фон-темный1);
+  padding-top:120px; /* фикс header overlap */
+}
+
+.секция-присоединяйся{
+  background: var(--фон-темный3)
+}
+
+/* =========================
+HEADINGS
+========================= */
+
+.секция-мерча .название-секции{
+  color: var(--текст-светлый1);
+  margin-bottom: 20px;
+}
+
+/* =========================
+SLIDER
+========================= */
+
+.секция-мерча .слайдер-мерча{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:80px;
+}
+
+.секция-мерча .сетка-мерча{
+  justify-content: center;
+  display:flex;
+   /*overflow-x:auto; */
+  gap:120px;
+  padding:20px 0;
+  flex:1;
+  scroll-behavior:smooth;
+}
+
+/* =========================
+CARD
+========================= */
+
+.секция-мерча .карточка-мерча{
+  flex:0 0 420px;
+  background:var(--фон-светлый3);
+  border-radius:20px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:.3s;
+}
+
+/* .секция-мерча .карточка-мерча:hover{
+  transform:translateY(-5px);
+}*/
+
+.секция-мерча .карточка-мерча{
+  transform: scale(1.2);
+} 
+
+
+/* .секция-мерча .карточка-мерча:nth-child(2){
+  transform: rotate(2deg) scale(1.04);
+}
+
+.секция-мерча .карточка-мерча:nth-child(3){
+  transform: rotate(-1deg) scale(1.03);
+}
+
+.секция-мерча .карточка-мерча:hover{
+  transform: rotate(0deg) scale(1.08);
+  z-index: 10;
+} */
+/* =========================
+IMAGE SLIDER
+========================= */
+
+.секция-мерча .мерч-слайдер{
+  height:300px;
+  overflow:hidden;
+}
+
+.секция-мерча .мерч-track{
+  display:flex;
+  transition:transform .4s ease;
+}
+
+.секция-мерча .мерч-track img{
+  width:100%;
+  height:100%;
+  flex:0 0 100%;
+  object-fit:cover;
+}
+
+/* =========================
+INFO
+========================= */
+
+.секция-мерча .инфо-мерча{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  flex:1;
+  color: var(--фон-светлый0);
+}
+
+.секция-мерча .дата-мерча{
+  opacity:.7;
+  font-size:16px;
+font-weight:750;
+}
+
+.секция-мерча .заголовок-мерча{
+  font-size:22px;
+  font-weight:700;
+}
+
+.секция-мерча .инфо-мерча .кнопка{
+  margin-top:auto;
+  width:100%;
+  color: var(--фон-светлый1);
+}
+
+/* =========================
+ARROWS
+========================= */
+
+.секция-мерча .кнопка-слайдера{
+  flex-shrink:0;
+}
+
+
+.мерч-слайдер{
+  position:relative;
+}
+
+.мерч-индикатор{
+  position:absolute;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:6px;
+  z-index:2;
+}
+
+.мерч-точка{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.4);
+  transition:0.3s;
+}
+
+.мерч-точка.active{
+  background:white;
+}
+
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width:768px){
+
+  .секция-мерча .сетка-мерча{
+    gap:100px;
+  }
+
+  .секция-мерча .карточка-мерча{
+    flex:0 0 85%;
+  }
+
+  .секция-мерча .мерч-слайдер{
+    height:240px;
+  }
+
+  .секция-мерча .кнопка-слайдера{
+    display:none;
+  }
+}
+
+@media (max-width:768px){
+
+  .секция-мерча .сетка-мерча{
+    flex-direction: column;   /* 🔥 вертикально */
+    overflow: visible;        /* убираем горизонтальный скролл */
+    align-items: center;      /* центрируем */
+  }
+
+  .секция-мерча .карточка-мерча{
+    width:100%;
+    max-width:420px;          /* чтобы не растягивались */
+  }
+
+}

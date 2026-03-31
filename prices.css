@@ -1,0 +1,516 @@
+
+/* =========================================================
+   2) Reset + base
+   ========================================================= */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--текст-светлый1);
+  background: var(--белый);
+  overflow-x: hidden;
+}
+
+a{ text-decoration:none; color:inherit; transition: var(--переход); }
+img{ max-width:100%; height:auto; display:block; }
+ul{ list-style:none; }
+
+.контейнер{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section{ padding: 40px 0; }
+
+
+/* =========================================================
+   3) Shared section heading (line + title)
+   ========================================================= */
+.заголовок-секции{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:40px;
+}
+
+.линия-секции{
+  width:40px;
+  height:2px;
+  background: var(--фон-светлый3);
+  flex-shrink:0;
+}
+
+.название-секции{
+  margin:0;
+  font-size:32px;
+  font-weight:500;
+  letter-spacing:.02em;
+  line-height:1.1;
+  text-transform:uppercase;
+  color: var(--фон-светлый3);
+}
+
+
+/* =========================================================
+   4) PRICES (prices.html)
+   ========================================================= */
+.секция-цены{
+  background: var(--фон-светлый);
+  padding-top: 100px; /* under fixed header (even if header css not included here) */
+}
+
+.секция-цены .заголовок-секции{ margin-top: 20px; }
+
+.подзаголовок-блока{
+  margin-top: 48px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--фон-светлый3);
+}
+
+/* grids */
+.сетка-цен{
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 120px;
+}
+
+.секция-цены .сетка-цен:first-of-type{ margin-bottom: 44px; }
+
+.сетка-цен.цены-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* card */
+.карточка-цены{
+  min-width: 0;
+  background: #fff;
+  border: 1.5px solid var(--price-border);
+  border-radius: 16px;
+  padding: 13px;
+  display: flex;
+  gap: 12px;
+}
+
+/* a bit larger for 4-col grid (desktop) */
+.сетка-цен.цены-4 .карточка-цены{
+  padding: 16px;
+  min-height: 130px;
+}
+
+/* left (number) */
+.лево-цены{
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
+}
+
+.число-цены{
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--price-number);
+}
+
+.длительность-под-числом{
+  margin-top: 8px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* right (text + price) */
+.детали-цены{
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.тип-цены{
+  font-size: 17px;
+  line-height: 1.15;
+  font-weight: 600;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.сумма-цены{
+  padding: 8px 18px;
+  border: 1.5px solid var(--price-border);
+  border-radius: 14px;
+  color: var(--price-accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* certificate CTA (not inside grid) */
+.ссылка-больше{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  margin-top: 10px;
+  padding: 18px 20px;
+  border-radius: 16px;
+
+  border: 1.5px solid rgba(199,154,203,.55);
+  background: rgba(199,154,203,.06);
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #7b4a8a;
+}
+
+.ссылка-больше:hover{ background: rgba(199,154,203,.10); }
+
+
+/* =========================================================
+   5) RULES (prices.html #rules)
+   ========================================================= */
+.секция-правила{
+  background: var(--белый);
+  padding: 10px 0 60px;
+}
+
+.правила-сетка{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.правила-колонка{ display: grid; gap: 18px; }
+
+.правило-карточка{
+  border: 2px solid rgba(143,114,179,.55);
+  border-radius: 16px;
+  padding: 18px 18px 14px;
+  background: #fff;
+}
+
+.правило-заголовок{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.правило-номер{
+  font-weight: 800;
+  color: var(--текст-светлый1);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.правило-тема{
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: var(--текст-светлый1);
+}
+
+.правило-список{
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.правило-список li{
+  position: relative;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--текст-светлый1);
+}
+
+.правило-список li::before{
+  content: "♡";
+  position: absolute;
+  left: 0;
+  top: .1em;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--фон-светлый3);
+}
+
+.правила-итог{
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(143,114,179,.55);
+  color: var(--фон-светлый3);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.45;
+  background: rgba(143,114,179,.06);
+}
+
+/* photo block (kept for completeness) */
+.правила-фото{
+  position: sticky;
+  top: 110px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(143,114,179,.35);
+  background: #fff;
+}
+
+.правила-фото img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   6) Responsive (single, conflict-free)
+   - keep 2 cards per row on adaptive
+   - price moves with description (same left edge)
+   - no negative margins, no overflow cuts
+   ========================================================= */
+
+/* RULES: always one column + hide photo on this page (no empty right side) */
+.правила-сетка{ grid-template-columns: 1fr !important; }
+.правила-фото{ display: none !important; }
+
+/* <= 768px: PRICES adaptive */
+@media (max-width: 768px){
+
+  /* keep 2 cards per row (both grids) */
+  .сетка-цен,
+  .сетка-цен.цены-4{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 14px !important;
+    margin-bottom: 26px;
+  }
+
+  .подзаголовок-блока{
+    margin-top: 36px;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  /* card: do not cut content */
+  .карточка-цены{
+    overflow: visible !important;
+    padding: 10px !important;
+    gap: 10px !important;
+    align-items: center;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  /* left column compact */
+  .лево-цены{
+    min-width: 58px !important;
+    padding: 0 !important;
+  }
+
+  .число-цены{
+    font-size: 34px !important;
+    line-height: 1 !important;
+  }
+
+  .длительность-под-числом{
+    margin-top: 4px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  /* right column: description + price move together */
+  .детали-цены{
+    min-width: 0 !important;         /* allows shrink in 2-column grid */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         /* instead of space-between */
+    align-items: flex-start !important;
+    text-align: center !important;
+    gap: 6px !important;
+
+    /* fine tune: move both a bit left together */
+    --details-shift-x: 0px;
+    transform: translateX(var(--details-shift-x));
+  }
+
+  .тип-цены{
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+    margin: 0 !important;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .сумма-цены{
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    align-self: flex-start !important;
+
+    /* if you need ONLY price slightly left (relative to text), use this:
+       --price-shift-x: 0px; transform: translateX(var(--price-shift-x));
+       but default is 0 to keep synced with description. */
+  }
+
+  /* CTA: compact */
+  .секция-цены .ссылка-больше{
+    font-size: 12.5px;
+    line-height: 1.1;
+    padding: 14px 16px;
+    white-space: nowrap;
+  }
+}
+
+/* Optional: if you ever decide that very narrow phones must go 1 column,
+   uncomment this block.
+
+@media (max-width: 420px){
+  .сетка-цен,
+  .сетка-цен.цены-4{
+    grid-template-columns: 1fr !important;
+  }
+}
+*/
+
+@media (max-width: 768px){
+
+  .секция-цены .ссылка-больше{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    /* padding: -30px -10px; */
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 1.2;
+
+    /* ВАЖНО */
+    white-space: normal;
+  }
+
+  /* ===== ТЕКСТ (переносится) ===== */
+  .ссылка-больше span,
+  .ссылка-больше p{
+    flex: 2 2 auto;              /* занимает всё доступное */
+    min-width: 0;                /* позволяет перенос */
+    white-space: normal;
+
+    /* максимум 2 строки */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+ 
+
+    overflow: hidden;
+  }
+
+  /* ===== СТРЕЛКА (НЕ ПЕРЕНОСИТСЯ) ===== */
+  .секция-цены .ссылка-больше svg,
+  .секция-цены .ссылка-больше::after{
+    flex: 1 1 auto;              /* ❗ никогда не сжимается */
+    white-space: nowrap;
+    align-self: center;
+    margin-right: -20px !important;  
+  }
+
+
+}
+@media (max-width: 768px){
+
+  /* текст + стрелка не разносить по краям */
+  .секция-цены .ссылка-больше{
+    justify-content: flex-start !important; /* вместо space-between */
+  }
+
+  /* если стрелка сделана псевдоэлементом */
+  .секция-цены .ссылка-больше::after{
+    margin-left: 12px;   /* ← тут регулируешь “ближе/дальше” */
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* если стрелка у тебя SVG внутри ссылки (на всякий случай) */
+  .секция-цены .ссылка-больше svg{
+    margin-left: 132px;   /* ← тут регулируешь */
+    flex: 0 0 auto;
+  }
+}
+
+
+@media (max-width: 768px){
+  .секция-цены .ссылка-больше{
+    word-spacing: -0.25em; /* ← притягивает стрелку к тексту */
+    overflow: visible !important;
+    padding-right: 20px !important;
+  }
+
+    .секция-цены .ссылка-больше svg,
+  .секция-цены .ссылка-больше::after{
+    flex: 0 0 auto !important;      /* не сжимать */
+    white-space: nowrap;
+  }
+}
+
+/* =========================================================
+   CTA (certificate) — FINAL mobile fix (<=768px)
+   Text can wrap to 2 lines, arrow never clipped
+   ========================================================= */
+@media (max-width: 768px){
+
+  .секция-цены .ссылка-больше{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+
+    padding: 14px 22px 14px 16px !important; /* + правый запас, чтобы стрелка не резалась */
+    overflow: visible !important;
+
+    white-space: normal !important;
+  }
+
+  /* Текст: максимум 2 строки (клиппим ТОЛЬКО текст, не стрелку) */
+  .секция-цены .ссылка-больше span,
+  .секция-цены .ссылка-больше p{
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+ 
+
+    overflow: hidden;
+    line-height: 1.2;
+    padding-right: 2px; /* отделяем текст от стрелки */
+  }
+
+  /* Стрелка: НЕ сжимается и НЕ вылезает вправо */
+  .секция-цены .ссылка-больше::after,
+  .секция-цены .ссылка-больше svg{
+    flex: 0 0 auto !important;
+    margin: 0 !important;          /* убираем любые отрицательные margin’ы */
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | Frame Nation</title>
+<meta name="description" content="Watch Frame Nation photo and video portfolio featuring classes, performances, workshops and the Frame Up community in Brno.">
+
+<link rel="canonical" href="https://framenation.cz/portfolio.html">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.PNG">
+<link rel="apple-touch-icon" href="/favicon.PNG">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | Frame Nation">
+<meta property="og:description" content="Watch Frame Nation photo and video portfolio featuring classes, performances, workshops and the Frame Up community in Brno.">
+<meta property="og:url" content="https://framenation.cz/portfolio.html">
+<meta property="og:image" content="https://framenation.cz/images/frame_nation_og.PNG">
+<meta property="og:site_name" content="Frame Nation">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portfolio | Frame Nation">
+<meta name="twitter:description" content="Watch Frame Nation photo and video portfolio featuring classes, performances, workshops and the Frame Up community in Brno.">
+<meta name="twitter:image" content="https://framenation.cz/images/frame_nation_og.PNG">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="99-overrides.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div data-include="partials/header.html"></div>
+
+  <main class="страница">
+    <section class="секция-страницы">
+      <div class="контейнер">
+
+        <div class="portfolio-page">
+
+          <!-- ====== PHOTO ====== -->
+          <div class="portfolio-heading">
+            <span class="portfolio-line"></span>
+            <h2 class="portfolio-subhead" data-i18n="portfolio.photo_h2"></h2>
+          </div>
+
+          <div class="portfolio-carousel" data-carousel aria-label="" data-i18n-aria="portfolio.photo_carousel_aria">
+            <div class="portfolio-viewport">
+              <div class="portfolio-track js-portfolio-photo-track">
+                <!-- JS inserts photo items here -->
+              </div>
+            </div>
+
+            <div class="portfolio-controls">
+              <button class="portfolio-nav portfolio-nav--prev" type="button" aria-label="" data-i18n-aria="a11y.prev">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+              </button>
+
+              <div class="portfolio-dots" aria-label="" data-i18n-aria="portfolio.dots_aria"></div>
+
+              <button class="portfolio-nav portfolio-nav--next" type="button" aria-label="" data-i18n-aria="a11y.next">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ====== VIDEO ====== -->
+          <div class="portfolio-heading portfolio-heading--spaced">
+            <span class="portfolio-line"></span>
+            <h2 class="portfolio-subhead" data-i18n="portfolio.video_h2"></h2>
+          </div>
+
+          <div class="portfolio-carousel" data-carousel aria-label="" data-i18n-aria="portfolio.video_carousel_aria">
+            <div class="portfolio-viewport">
+              <div class="portfolio-track js-portfolio-video-track">
+                <!-- JS inserts video items here -->
+              </div>
+            </div>
+
+            <div class="portfolio-controls">
+              <button class="portfolio-nav portfolio-nav--prev" type="button" aria-label="" data-i18n-aria="a11y.prev">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+              </button>
+
+              <div class="portfolio-dots" aria-label="" data-i18n-aria="portfolio.dots_aria"></div>
+
+              <button class="portfolio-nav portfolio-nav--next" type="button" aria-label="" data-i18n-aria="a11y.next">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- INSTAGRAM -->
+  <div data-include="partials/instagram.html"></div>
+
+  <!-- FOOTER -->
+  <div data-include="partials/footer.html"></div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-modal__backdrop" data-video-close></div>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true">
+      <button class="video-modal__close" type="button" data-video-close aria-label="Close">×</button>
+      <div class="video-modal__frame" id="videoModalFrame"></div>
+    </div>
+  </div>
+
+</body>
+</html>
