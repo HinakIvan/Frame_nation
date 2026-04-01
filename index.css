@@ -297,10 +297,10 @@ font-weight:600;
 color:var(--текст-темный0);
 }
 
-.заголовок-события{
+.карточка-события .заголовок-события{
 font-size:28px;
 font-weight:800;
-color:var(--текст-светлый0) !important;
+color:var(--белый) !important;
 }
 
 .описание-события{
@@ -457,10 +457,14 @@ TEACHERS SCROLL FIX
 
 .секция-преподаватели,
 .слайдер-преподавателей{
-overflow-y:hidden;
+overflow-y:hidden ;
 
 }
 
+.секция-преподаватели .сетка-преподавателей {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 /* ======================================
    PAST EVENTS
 ====================================== */
@@ -498,6 +502,7 @@ overflow-y:hidden;
   flex-direction: column;
   background: var(--фон-темный0);
   border-radius: 6px;
+  border: 2px solid var(--фон-светлый2) !important;
   overflow: hidden;
   box-shadow: var(--тень);
   border: none;
@@ -1362,8 +1367,15 @@ header {
   }
 
   /* WHY section spacing */
-  .секция-почему-мы .заголовок-секции{ margin-bottom: 4px !important; }
-  .секция-почему-мы .подзаголовок-секции{ margin-top: 0 !important; }
+  .секция-почему-мы .заголовок-секции{ 
+    margin-bottom: 0px !important; 
+    margin-top: -10px !important;
+  }
+  
+  .секция-почему-мы .подзаголовок-секции{ 
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important; 
+  }
 }
 
 /* ---------- DESKTOP HERO ---------- */
@@ -1404,7 +1416,7 @@ margin:0 16px;
 
 border-radius:24px;
 
-padding:28px 22px;
+padding:2px 2px;
 
 display:flex;
 flex-direction:column;
@@ -1651,17 +1663,7 @@ height:260px;
 
 }
 
-/* =================================
-TEACHERS DOTS
-================================= */
 
-/* скрыты на desktop */
-
-/* .точки-преподавателей{
-display:none;
-} */
-
-/* mobile */
 
 @media (max-width:768px){
 
@@ -1691,41 +1693,13 @@ transition:all .3s ease;
 
 .точки-преподавателей .точка.активная{
 
-background:var(--фон-светлый3);
+background:var(--фон-светлый1);
 
 transform:scale(1.2);
 
 }
 
 }
-
-/* =================================
-PAST EVENTS MOBILE
-================================= */
-
-/* @media (max-width:768px){
-
-.секция-прошедшие-события .сетка-прошедших{
-
-gap:20px;
-padding:10px 16px;
-
-}
-
-.секция-прошедшие-события .карточка-прошедшего{
-
-flex:0 0 70%;
-
-}
-
-.секция-прошедшие-события .карточка-прошедшего img{
-
-height:200px;
-
-}
-
-} */
-
 
 
 @media (max-width:768px){
@@ -1831,114 +1805,6 @@ display:none !important;
 
 }
 
-
-/* =========================================================
-   PRICES — mobile (<=768px) fixes
-   ========================================================= */
-@media (max-width: 768px) {
-  .секция-цены {
-    padding-top: 30px;   /* было 80px */
-     padding-bottom: 32px;
-  }
-
-  .сетка-цен {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: auto;
-  gap: 14px;
-  align-items: stretch;
-}
-
-  .карточка-цены {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: hidden;
-    padding: 8px 8px 8px 6px;
-    gap: 0;
-    align-items: center;
-  }
-
-  .карточка-цены * {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-
-  /* Layout: gift certificate + price grid */
-  .секция-цены .содержимое-цен {
-    align-items: start;
-    gap: 14px;
-  }
-
-  /* Gift certificate: remove scale/shift on mobile */
-  .секция-цены .подарочный-сертификат {
-    width: 100%;
-    height: auto !important;
-    transform: none !important;
-    transform-origin: initial !important;
-  }
-
-  .секция-цены .подарочный-сертификат img {
-    width: 100% !important; /* вместо 130% */
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Certificate button: white like page background */
-  .секция-цены .кнопка-сертификат {
-    width: 100%;
-    background: var(--белый) !important; /* или var(--фон-светлый) */
-    color: var(--фон-темный3);
-    border: 2px solid var(--фон-светлый3);
-  }
-
-  .лево-цены {
-    min-width: 56px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .число-цены {
-    font-size: 32px;
-   
-  }
-
-  .длительность-под-числом {
-    margin-top: 4px;
-    font-size: 14px;
-
-  }
-
-  /* Text block with type + price */
-  .карточка-цены .детали-цены {
-    gap: 6px;
-    align-items: flex-start;
-    text-align: left;
-    
-  }
-
-  /* Type label: right-aligned */
-  .карточка-цены .тип-цены {
-    margin-left: -20px;
-    font-size: 13px;
-    line-height: 1.2;
-    text-align: center !important;
-    align-self: stretch;
-  }
-
-  .сумма-цены {
-    margin-top: 4px;
-    padding: 0 8px;
-    font-size: 14px;
-    margin-left: -30px;
-  }
-
-.секция-вопросы {
-    padding-bottom: 20px;
-  }
-
-}
 
 /* =========================================================
    ATMOSPHERE — mobile compact & unified version
@@ -2057,7 +1923,7 @@ display:none !important;
 
     font-size: 13px;
     font-weight: 600;
-    color: var(--фон-светлый3);
+    /* color: var(--фон-светлый3); */
     text-decoration: none;
     opacity: 0.95;
   }
@@ -2084,140 +1950,3 @@ display:none !important;
 
 }
 
-
-
-/* =========================================================
-   PRICES — mobile fix (keep 2 cards per row, no cut)
-   Only affects <=768px
-   ========================================================= */
-@media (max-width: 768px){
-
-  /* 2 cards per row — оставляем как ты хочешь */
-  .секция-цены .сетка-цен{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-auto-rows: auto !important;
-    gap: 14px !important;
-  }
-
-  /* НЕЛЬЗЯ резать содержимое карточки */
-  .секция-цены .карточка-цены{
-    overflow: visible !important;   /* было hidden — из-за этого режет */
-    align-items: center;
-    gap: 10px !important;
-    padding: 10px !important;
-  }
-
-  /* Убираем отрицательные сдвиги — они и ломают */
-  .секция-цены .карточка-цены .тип-цены{
-    margin-left: 0 !important;
-    text-align: center !important;
-    align-self: stretch;
-  }
-
-  .секция-цены .карточка-цены .сумма-цены{
-    margin-left: 0 !important;
-  }
-
-  /* Разрешаем правому блоку реально сжиматься (важно для grid/flex) */
-  .секция-цены .карточка-цены .детали-цены{
-    min-width: 0 !important;        /* перебиваем base min-width:150px */
-    width: 100%;
-    align-items: flex-start !important;
-    text-align: center !important;
-    gap: 6px;
-  }
-
-  /* Чуть компактнее типографика, чтобы в 2 колонки всё помещалось */
-  .секция-цены .число-цены{ font-size: 34px !important; }
-  .секция-цены .длительность-под-числом{ font-size: 12px !important; white-space: nowrap; }
-
-  .секция-цены .тип-цены{
-    font-size: 13px !important;
-    line-height: 1.15 !important;
-    overflow-wrap: anywhere;
-    hyphens: auto;
-  }
-
-  .секция-цены .сумма-цены{
-    font-size: 13px !important;
-    padding: 6px 10px !important;
-    white-space: nowrap;
-  }
-}
-
-/* =================================
-SOCIAL CARDS MOBILE
-================================= */
-
-@media (max-width:768px){
-
-.карточка-инстаграм,
-.карточка-телеграм{
-
-display:flex;
-align-items:center;
-
-gap:16px;
-
-}
-
-/* текст */
-
-.содержимое-инстаграм,
-.содержимое-телеграм{
-
-flex:1;
-min-width:0;
-
-overflow-wrap:break-word;
-word-break:break-word;
-
-}
-
-/* QR */
-
-.qr-код-инстаграм,
-.qr-код-телеграм{
-
-flex:0 0 110px;
-
-}
-
-.qr-код-инстаграм img,
-.qr-код-телеграм img{
-
-width:110px;
-height:auto;
-
-}
-
-}
-
-/* =================================
-FAQ FOOTER SPACING
-================================= */
-
-footer{
-margin-top:0 !important;
-}
-
-@media (max-width:768px){
-
-.секция-вопросы{
-padding:0 !important;
-margin-bottom:0;
-}
-
-.секция-вопросы .контейнер{
-padding-bottom:16px !important;
-}
-
-.секция-вопросы .список-вопросов{
-margin-bottom:20px !important;
-}
-
-.секция-вопросы .элемент-вопроса:last-child{
-margin-bottom:16px !important;
-}
-
-}

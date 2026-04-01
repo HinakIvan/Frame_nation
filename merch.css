@@ -11,7 +11,8 @@ SECTION
 
 .секция-мерча{
   background: var(--фон-темный1);
-  padding-top:120px; /* фикс header overlap */
+  padding-top:10px; /* фикс header overlap */
+  
 }
 
 .секция-присоединяйся{
@@ -22,8 +23,22 @@ SECTION
 HEADINGS
 ========================= */
 
-.секция-мерча .название-секции{
+.секция-мерча .название-секции {
   color: var(--текст-светлый1);
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.линия-секции{
+  align-items: center;
+  width: 40px;
+  height: 2px;
+  background: var(--фон-светлый1);
+  flex-shrink: 0;
+}
+.секция-мерча .линия-секции{
+  /* color: var(--текст-светлый1); */
+  background: var(--фон-светлый1);
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -35,7 +50,8 @@ SLIDER
   display:flex;
   align-items:center;
   gap:20px;
-  margin-bottom:80px;
+  margin-bottom:0px;
+  margin-bottom:0px;
 }
 
 .секция-мерча .сетка-мерча{
@@ -207,4 +223,9 @@ MOBILE
     max-width:420px;          /* чтобы не растягивались */
   }
 
+}
+@media (max-width:768px){
+  .секция-присоединяйся{
+    display:none;
+  }
 }

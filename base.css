@@ -608,7 +608,7 @@ scroll-margin-top:calc(var(--высота-шапки) + 12px);
 
   .содержимое-инстаграм h3 {
     margin: 0 0 16px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1.1;
