@@ -116,7 +116,7 @@ background:var(--фон-светлый3);
 border:2px solid var(--фон-светлый2);
 
 min-height:320px;
-max-height:520px;
+max-height:560px;
 
 transition:transform .25s ease, box-shadow .25s ease;
 
@@ -128,7 +128,7 @@ box-shadow:0 14px 40px rgba(0,0,0,0.08);
 }
 
 .кнопка-сертификат{
-margin-top:0px;
+margin-top:10px;
 color:var(--фон-светлый0) ;
 }
 /* =========================================================
@@ -259,10 +259,23 @@ display:flex;
 width:100%;
 height:100%;
 object-fit:cover;
-object-position: center 50%;
+object-position: center 35%;
 }
 
+.карточка-события .изображение-события{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
 
+.карточка-события .изображение-события img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: top center; */
+  display: block;
+}
 /* =========================================================
 PLACEHOLDER
 ========================================================= */
@@ -328,6 +341,10 @@ MOBILE
 
 @media (max-width:768px){
 
+  .подзаголовок-секции {
+    display: none;
+  }
+
 .events-list .карточка-события{
 grid-template-columns:1fr;
 }
@@ -365,12 +382,12 @@ transform:none;
 }
 
 .дата-события{
-font-size:10px;
-margin-bottom:-10px;
+font-size:14px;
+margin-bottom:-8px;
 }
 
 .past-events .дата-события{
-font-size:10px;
+font-size:14px;
 margin-top:10px !important;
 }
 
