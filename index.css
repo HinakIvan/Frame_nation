@@ -474,13 +474,24 @@ overflow-y:hidden ;
 
 .секция-прошедшие-события {
   background: var(--фон-темный2);
+  margin-top: -20px;
+}
+
+.секция-прошедшие-события .название-секции  {
+  margin-top: -100px;
+  margin-bottom: -70px;
+}
+
+.секция-прошедшие-события .линия-секции{
+  margin-top: -100px;
+  margin-bottom: -70px;
 }
 
 .слайдер-прошедших {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .сетка-прошедших {
@@ -490,6 +501,7 @@ overflow-y:hidden ;
   padding: 20px 0;
   flex: 1;
   scroll-behavior: smooth;
+  
 }
 
 /* карточка */
@@ -820,6 +832,7 @@ FAQ
 
 .список-вопросов {
   margin-top: 40px;
+  margin-bottom: -50px;
 }
 
 .элемент-вопроса {
@@ -1062,10 +1075,12 @@ FAQ
   filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.14));
 }
 
-/* .header,
-header {
-  overflow: visible;
-} */
+
+.подвал{
+ 
+  margin-top: 0px;
+
+}
 
 /* ===========================
    MEDIA QUERIES (собраны без дублей)

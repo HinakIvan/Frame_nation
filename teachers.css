@@ -113,6 +113,12 @@ color: var(--фон-светлый1);
 /* =========================
    6) TEACHERS page layout
    ========================= */
+.teachers-intro{
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
+
 .teachers-page{
   display: flex;
   flex-direction: column;
