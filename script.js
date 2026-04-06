@@ -1895,14 +1895,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
     // DESKTOP
     // =========================
-    slider.addEventListener("click", () => {
+    slider.addEventListener("click", (e) => {
 
-      if (window.innerWidth <= 768) return;
+  if (window.innerWidth <= 768) return;
 
-      index = (index + 1) % images.length;
-      updateSlide();
+  const rect = slider.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const isLeftSide = clickX < rect.width / 2;
 
-    });
+  if (isLeftSide) {
+    index = index - 1;
+    if (index < 0) index = images.length - 1;
+  } else {
+    index = index + 1;
+    if (index >= images.length) index = 0;
+  }
+
+  updateSlide();
+
+});
 
     // =========================
     // MOBILE

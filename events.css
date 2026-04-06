@@ -310,9 +310,9 @@ PAST EVENTS
 }
 
 .past-events .карточка-события .кнопка{
-  background: var(--фон-темный4) !important;
+  background: var(--фон-темный5) !important;
   color: var(--фон-светлый0) !important;
-  border: 2px solid var(--фон-темный4) !important;
+  border: 2px solid var(--фон-темный5) !important;
 }
 
 .past-events .карточка-события .кнопка:hover{
@@ -364,7 +364,7 @@ grid-template-columns:1fr;
 
   .past-events .карточка-события .изображение-события {
     width: 100% !important;
-    height: 260px !important;
+    height: 270px !important;
   }
 
   .past-events .карточка-события .инфо-события {
@@ -374,7 +374,7 @@ grid-template-columns:1fr;
 
 
 .карточка-события .изображение-события{
-height:260px;
+height:280px;
 }
 
 .карточка-события .инфо-события{

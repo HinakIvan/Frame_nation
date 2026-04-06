@@ -40,17 +40,3 @@ overflow-y:auto;
 }
 
 
-.карточка-события .изображение-события{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: block;
-}
-
-.карточка-события .изображение-события img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* object-position: top center; */
-  display: block;
-}
